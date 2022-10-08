@@ -3,27 +3,31 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		09CFD38E28F19F9200ECE80C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CFD38D28F19F9200ECE80C /* AppDelegate.swift */; };
 		09CFD39028F19F9200ECE80C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CFD38F28F19F9200ECE80C /* SceneDelegate.swift */; };
-		09CFD39228F19F9200ECE80C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CFD39128F19F9200ECE80C /* ViewController.swift */; };
+		09CFD39228F19F9200ECE80C /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CFD39128F19F9200ECE80C /* SearchTableViewController.swift */; };
 		09CFD39528F19F9200ECE80C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09CFD39328F19F9200ECE80C /* Main.storyboard */; };
 		09CFD39728F19F9600ECE80C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09CFD39628F19F9600ECE80C /* Assets.xcassets */; };
 		09CFD39A28F19F9600ECE80C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09CFD39828F19F9600ECE80C /* LaunchScreen.storyboard */; };
+		7C3A275319DDCAE9C85DD6CD /* Pods_ios_dca_calculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75A3296B8EED4969E2D5E6FE /* Pods_ios_dca_calculator.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		09CFD38A28F19F9200ECE80C /* ios-dca-calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-dca-calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		09CFD38D28F19F9200ECE80C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09CFD38F28F19F9200ECE80C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		09CFD39128F19F9200ECE80C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		09CFD39128F19F9200ECE80C /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		09CFD39428F19F9200ECE80C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		09CFD39628F19F9600ECE80C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09CFD39928F19F9600ECE80C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		09CFD39B28F19F9600ECE80C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		60CDFEDEF45DACDFB14FCB19 /* Pods-ios-dca-calculator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-dca-calculator.release.xcconfig"; path = "Target Support Files/Pods-ios-dca-calculator/Pods-ios-dca-calculator.release.xcconfig"; sourceTree = "<group>"; };
+		75A3296B8EED4969E2D5E6FE /* Pods_ios_dca_calculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_dca_calculator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEB05ABC82CDB64EB8DC70D3 /* Pods-ios-dca-calculator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-dca-calculator.debug.xcconfig"; path = "Target Support Files/Pods-ios-dca-calculator/Pods-ios-dca-calculator.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C3A275319DDCAE9C85DD6CD /* Pods_ios_dca_calculator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				09CFD38C28F19F9200ECE80C /* ios-dca-calculator */,
 				09CFD38B28F19F9200ECE80C /* Products */,
+				3EDDF587D5C1144F3C0EC7C5 /* Pods */,
+				C8B41FDF3C50FB7A433D9775 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,13 +65,30 @@
 			children = (
 				09CFD38D28F19F9200ECE80C /* AppDelegate.swift */,
 				09CFD38F28F19F9200ECE80C /* SceneDelegate.swift */,
-				09CFD39128F19F9200ECE80C /* ViewController.swift */,
+				09CFD39128F19F9200ECE80C /* SearchTableViewController.swift */,
 				09CFD39328F19F9200ECE80C /* Main.storyboard */,
 				09CFD39628F19F9600ECE80C /* Assets.xcassets */,
 				09CFD39828F19F9600ECE80C /* LaunchScreen.storyboard */,
 				09CFD39B28F19F9600ECE80C /* Info.plist */,
 			);
 			path = "ios-dca-calculator";
+			sourceTree = "<group>";
+		};
+		3EDDF587D5C1144F3C0EC7C5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CEB05ABC82CDB64EB8DC70D3 /* Pods-ios-dca-calculator.debug.xcconfig */,
+				60CDFEDEF45DACDFB14FCB19 /* Pods-ios-dca-calculator.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C8B41FDF3C50FB7A433D9775 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				75A3296B8EED4969E2D5E6FE /* Pods_ios_dca_calculator.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 09CFD39E28F19F9600ECE80C /* Build configuration list for PBXNativeTarget "ios-dca-calculator" */;
 			buildPhases = (
+				5D02474B8120B54A37634E51 /* [CP] Check Pods Manifest.lock */,
 				09CFD38628F19F9200ECE80C /* Sources */,
 				09CFD38728F19F9200ECE80C /* Frameworks */,
 				09CFD38828F19F9200ECE80C /* Resources */,
+				33BF8B9C96A98B13382521C9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -103,7 +129,7 @@
 				};
 			};
 			buildConfigurationList = 09CFD38528F19F9200ECE80C /* Build configuration list for PBXProject "ios-dca-calculator" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -133,12 +159,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		33BF8B9C96A98B13382521C9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ios-dca-calculator/Pods-ios-dca-calculator-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ios-dca-calculator/Pods-ios-dca-calculator-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ios-dca-calculator/Pods-ios-dca-calculator-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5D02474B8120B54A37634E51 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ios-dca-calculator-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		09CFD38628F19F9200ECE80C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09CFD39228F19F9200ECE80C /* ViewController.swift in Sources */,
+				09CFD39228F19F9200ECE80C /* SearchTableViewController.swift in Sources */,
 				09CFD38E28F19F9200ECE80C /* AppDelegate.swift in Sources */,
 				09CFD39028F19F9200ECE80C /* SceneDelegate.swift in Sources */,
 			);
@@ -282,6 +350,7 @@
 		};
 		09CFD39F28F19F9600ECE80C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CEB05ABC82CDB64EB8DC70D3 /* Pods-ios-dca-calculator.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -290,11 +359,13 @@
 				DEVELOPMENT_TEAM = B453YZ4Z55;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "ios-dca-calculator/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -310,6 +381,7 @@
 		};
 		09CFD3A028F19F9600ECE80C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60CDFEDEF45DACDFB14FCB19 /* Pods-ios-dca-calculator.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -318,11 +390,13 @@
 				DEVELOPMENT_TEAM = B453YZ4Z55;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "ios-dca-calculator/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
