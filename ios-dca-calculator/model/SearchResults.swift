@@ -7,6 +7,7 @@
 
 import Foundation
 
+// MARK: SearchResults
 struct SearchResults: Decodable {
 
     let items: [SearchResult]
@@ -16,6 +17,7 @@ struct SearchResults: Decodable {
     }
 }
 
+// MARK: SearchResult
 struct SearchResult: Decodable {
 
     let symbol: String

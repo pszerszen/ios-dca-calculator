@@ -52,6 +52,7 @@ class SearchTableViewController: UITableViewController {
             }.store(in: &subscribers)
     }
     
+    // MARK: TableView
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.searchResults?.items.count ?? 0
     }
@@ -65,7 +66,8 @@ class SearchTableViewController: UITableViewController {
     }
 }
 
-extension SearchTableViewController: UISearchResultsUpdating, UISearchControllerDelegate, UISearchBarDelegate {
+// MARK: UISearchResultsUpdating
+extension SearchTableViewController: UISearchResultsUpdating, UISearchControllerDelegate {
     
     func updateSearchResults(for searchController: UISearchController) {
         guard let searchQuery = searchController.searchBar.text, !searchQuery.isEmpty else { return }
