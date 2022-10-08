@@ -6,8 +6,12 @@
 //
 
 import UIKit
+import Combine
 
 class SearchTableViewController: UITableViewController {
+    
+    private let apiService: ApiService = ApiService()
+    private var subscribers: Set<AnyCancellable> = Set<AnyCancellable>()
     
     private lazy var searchController: UISearchController = {
         let sc = UISearchController(searchResultsController: self)
@@ -22,10 +26,24 @@ class SearchTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
+        performSearch(keywords: "S&B")
     }
 
     private func setupNavigationBar() {
         navigationItem.searchController = searchController
+    }
+    
+    private func performSearch(keywords: String?) {
+        if let keywords {
+            apiService.fetchSymbolsPublisher(keywords: keywords).sink { completion in
+                switch completion {
+                    case .failure(let error): print(error.localizedDescription)
+                    case .finished: break
+                }
+            } receiveValue: { response in
+                print(response)
+            }.store(in: &subscribers)
+        }
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
