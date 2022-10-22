@@ -10,9 +10,15 @@ import Combine
 
 class SearchTableViewController: UITableViewController {
     
+    private enum Mode {
+        case onboarding
+        case search
+    }
+    
     private let apiService: ApiService = ApiService()
     private var subscribers: Set<AnyCancellable> = Set<AnyCancellable>()
     private var searchResults: SearchResults?
+    @Published private var mode: Mode = .onboarding
     @Published private var searchQuery: String = ""
     
     private lazy var searchController: UISearchController = {
@@ -28,17 +34,23 @@ class SearchTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
+        setupTableView()
         observeForm()
     }
     
     private func setupNavigationBar() {
         navigationItem.searchController = searchController
+        navigationItem.title = "Search"
+    }
+    
+    private func setupTableView() {
+        tableView.tableFooterView = UIView()
     }
     
     private func observeForm() {
         $searchQuery
             .debounce(for: .milliseconds(750), scheduler: RunLoop.main)
-            .sink { [unowned self] (searchQuery) in
+            .sink { [unowned self] searchQuery in
                 self.apiService.fetchSymbolsPublisher(keywords: searchQuery).sink { (completion) in
                     switch completion {
                     case .failure(let error):
@@ -50,6 +62,15 @@ class SearchTableViewController: UITableViewController {
                     self.tableView.reloadData()
                 }.store(in: &self.subscribers)
             }.store(in: &subscribers)
+        
+        $mode.sink { [unowned self] mode in
+            switch mode {
+            case .onboarding:
+                self.tableView.backgroundView = SearchPlaceholderView()
+            case .search:
+                self.tableView.backgroundView = nil
+            }
+        }.store(in: &subscribers)
     }
     
     // MARK: TableView
@@ -70,7 +91,12 @@ class SearchTableViewController: UITableViewController {
 extension SearchTableViewController: UISearchResultsUpdating, UISearchControllerDelegate {
     
     func updateSearchResults(for searchController: UISearchController) {
-        guard let searchQuery = searchController.searchBar.text, !searchQuery.isEmpty else { return }
+        guard let searchQuery = searchController.searchBar.text,
+              !searchQuery.isEmpty else { return }
         self.searchQuery = searchQuery
+    }
+    
+    func willPresentSearchController(_ searchController: UISearchController) {
+        mode = .search
     }
 }
