@@ -11,6 +11,7 @@
 		09157C9428F1DD2C00D3D475 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09157C9328F1DD2C00D3D475 /* ApiService.swift */; };
 		09157C9728F1DEF900D3D475 /* SearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09157C9628F1DEF900D3D475 /* SearchResults.swift */; };
 		09CC2D9829043030007E0723 /* SearchPlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CC2D9729043030007E0723 /* SearchPlaceholderView.swift */; };
+		09CC2D9B29059F5F007E0723 /* UIAnimatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CC2D9A29059F5F007E0723 /* UIAnimatable.swift */; };
 		09CFD38E28F19F9200ECE80C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CFD38D28F19F9200ECE80C /* AppDelegate.swift */; };
 		09CFD39028F19F9200ECE80C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CFD38F28F19F9200ECE80C /* SceneDelegate.swift */; };
 		09CFD39228F19F9200ECE80C /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CFD39128F19F9200ECE80C /* SearchTableViewController.swift */; };
@@ -25,6 +26,7 @@
 		09157C9328F1DD2C00D3D475 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		09157C9628F1DEF900D3D475 /* SearchResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResults.swift; sourceTree = "<group>"; };
 		09CC2D9729043030007E0723 /* SearchPlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPlaceholderView.swift; sourceTree = "<group>"; };
+		09CC2D9A29059F5F007E0723 /* UIAnimatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIAnimatable.swift; sourceTree = "<group>"; };
 		09CFD38A28F19F9200ECE80C /* ios-dca-calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-dca-calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		09CFD38D28F19F9200ECE80C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		09CFD38F28F19F9200ECE80C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +85,14 @@
 			path = model;
 			sourceTree = "<group>";
 		};
+		09CC2D9929059E9B007E0723 /* protocol */ = {
+			isa = PBXGroup;
+			children = (
+				09CC2D9A29059F5F007E0723 /* UIAnimatable.swift */,
+			);
+			path = protocol;
+			sourceTree = "<group>";
+		};
 		09CFD38128F19F9200ECE80C = {
 			isa = PBXGroup;
 			children = (
@@ -104,16 +114,17 @@
 		09CFD38C28F19F9200ECE80C /* ios-dca-calculator */ = {
 			isa = PBXGroup;
 			children = (
-				09157C9528F1DEE500D3D475 /* model */,
-				09157C9228F1DD0200D3D475 /* service */,
 				09157C8F28F1DA1100D3D475 /* controller */,
+				09157C9528F1DEE500D3D475 /* model */,
+				09CC2D9929059E9B007E0723 /* protocol */,
+				09157C9228F1DD0200D3D475 /* service */,
 				09157C8E28F1D9FD00D3D475 /* view */,
+				09CFD39B28F19F9600ECE80C /* Info.plist */,
 				09CFD38D28F19F9200ECE80C /* AppDelegate.swift */,
 				09CFD38F28F19F9200ECE80C /* SceneDelegate.swift */,
-				09CFD39328F19F9200ECE80C /* Main.storyboard */,
 				09CFD39628F19F9600ECE80C /* Assets.xcassets */,
 				09CFD39828F19F9600ECE80C /* LaunchScreen.storyboard */,
-				09CFD39B28F19F9600ECE80C /* Info.plist */,
+				09CFD39328F19F9200ECE80C /* Main.storyboard */,
 			);
 			path = "ios-dca-calculator";
 			sourceTree = "<group>";
@@ -251,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				09CFD39228F19F9200ECE80C /* SearchTableViewController.swift in Sources */,
+				09CC2D9B29059F5F007E0723 /* UIAnimatable.swift in Sources */,
 				09157C9428F1DD2C00D3D475 /* ApiService.swift in Sources */,
 				09157C9128F1DA4000D3D475 /* SearchTableViewCell.swift in Sources */,
 				09CFD38E28F19F9200ECE80C /* AppDelegate.swift in Sources */,

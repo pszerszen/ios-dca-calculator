@@ -7,8 +7,9 @@
 
 import UIKit
 import Combine
+import MBProgressHUD
 
-class SearchTableViewController: UITableViewController {
+class SearchTableViewController: UITableViewController, UIAnimatable {
     
     private enum Mode {
         case onboarding
@@ -16,8 +17,10 @@ class SearchTableViewController: UITableViewController {
     }
     
     private let apiService: ApiService = ApiService()
+    
     private var subscribers: Set<AnyCancellable> = Set<AnyCancellable>()
     private var searchResults: SearchResults?
+    
     @Published private var mode: Mode = .onboarding
     @Published private var searchQuery: String = ""
     
@@ -51,7 +54,9 @@ class SearchTableViewController: UITableViewController {
         $searchQuery
             .debounce(for: .milliseconds(750), scheduler: RunLoop.main)
             .sink { [unowned self] searchQuery in
+                self.showLoadingAnimation()
                 self.apiService.fetchSymbolsPublisher(keywords: searchQuery).sink { (completion) in
+                    self.hideLoadingAnimation()
                     switch completion {
                     case .failure(let error):
                         print(error.localizedDescription)
